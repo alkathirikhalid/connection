@@ -1,2 +1,64 @@
-# connection
-An Android utility class to detect network connection, its types and sub types. 
+[![](https://jitpack.io/v/alkathirikhalid/connection.svg)](https://jitpack.io/#alkathirikhalid/connection)
+
+# Connection
+An Android utility class to Monitor network connections like Wi-Fi, GPRS, UMTS, etc for API 16 and above, this class attempt to fail over to another network when connectivity to a network is lost by checking <code>isConnectedOrConnecting</code>, it provides a way that allows applications to query the coarse-grained or fine-grained state of the available networks by checking <code>isTypeMobile</code> or <code>isTypeWifi</code>. It also provides a way that allows applications to request and check networks for their fast data traffic by checking <code>isConnectedConnectionFast</code> or <code>isConnectedConnectionSlow</code>. It can be used in any Android project either using build script or adding aar file.
+
+# Usage
+<p><strong>It is safer to check <code>isConnectedConnectionSlow</code> first or only rather than <code>isConnectedConnectionFast</code> first or combined, to allow forward compatibility in the event faster mobile connection are introduce in the future that are above 20 plus Mbps.</strong></p>
+
+<p>All accessible and usable methods automatically calls <code>isConnected()</code> to guarantees that connectivity exists except for <code>isConnectedOrConnecting</code> depending on your application needs.</p>
+<ul><li><code>Connection.isConnectedConnectionSlow(context);</code></li></ul>
+
+# Installation
+### Gradle
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+```
+dependencies {
+	        compile 'com.github.alkathirikhalid:connection:v1.01'
+	}
+  ```
+### Maven
+  ```
+  <repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+  ```
+  ```
+  <dependency>
+	    <groupId>com.github.alkathirikhalid</groupId>
+	    <artifactId>connection</artifactId>
+	    <version>v1.01</version>
+	</dependency>
+  ```
+  
+# Further Resources
+<ul>
+<li>Document download: https://github.com/alkathirikhalid/connection/releases/download/v1.01/docs.zip</li>
+<li>AAR download: https://github.com/alkathirikhalid/connection/releases/download/v1.01/connection.aar</li>
+</ul>
+  
+# License
+
+Copyright 2015 Al-Kathiri Khalid www.alkathirikhalid.com
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
