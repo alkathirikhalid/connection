@@ -6,7 +6,7 @@ An Android utility class to Monitor network connections like Wi-Fi, GPRS, UMTS, 
 # Usage
 <p><strong>It is safer to check <code>isConnectedConnectionSlow</code> first or only rather than <code>isConnectedConnectionFast</code> first or combined, to allow forward compatibility in the event faster mobile connection are introduce in the future that are above 20 plus Mbps.</strong></p>
 
-<p>Add permission in Android Manifest File <pre>&lt;uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/&gt;</pre></p>
+<p>Add permission in Android Manifest File <code>&lt;uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/&gt;</code></p>
 
 <p>All accessible and usable methods automatically calls <code>isConnected()</code> to guarantees that connectivity exists except for <code>isConnectedOrConnecting</code> depending on your application needs.</p>
 <code>Connection.isConnectedConnectionSlow(context);</code>
