@@ -9,12 +9,12 @@ An Android utility class to Monitor network connections like Wi-Fi, GPRS, UMTS, 
 <p>All accessible and usable methods automatically calls <code>isConnected()</code> to guarantees that connectivity exists except for <code>isConnectedOrConnecting</code> depending on your application needs.</p>
 <code>Connection.isConnectedConnectionSlow(context);</code>
 ### Accesible and usable Methods
-<p><code>isConnectedOrConnecting():</code> Checks if there is connectivity or is in the process of being established. This is applicable for applications that need to do any less intensive or slow network related activities.</p>
-<p><code>isConnected():</code> Checks if there is connectivity and it is possible to pass data. This is applicable for applications that need to do any intensive network related activities like data transactions such as read or write data, guarantees that the network is fully usable.</p>
-<p><code>isTypeWifi():</code> Checks if there is connectivity to WIFI, when active, all data traffic will use this network.</p>
-<p><code>isTypeMobile():</code> Checks if there is connectivity to MOBILE data, when active, all data traffic will use this network.</p>
-<p><code>isConnectedConnectionFast():</code> Checks if there is connectivity to MOBILE data speed of about 400kbps to 23Mbps. Supports subtype EVDO0, EVDOA, EVDOB, UMTS, EHRPD, HSDPA, HSPA, HSUPA, HSPAP and LTE.</p>
-<p><code>isConnectedConnectionSlow():</code>Checks if there is connectivity to MOBILE data speed of about 14kbps to 100kbps. Supports subtype CDMA, 1xRTT, EDGE, GPRS and IDEN.</p>
+<p><code>isConnectedOrConnecting()</code> Checks if there is connectivity or is in the process of being established. This is applicable for applications that need to do any less intensive or slow network related activities.</p>
+<p><code>isConnected()</code> Checks if there is connectivity and it is possible to pass data. This is applicable for applications that need to do any intensive network related activities like data transactions such as read or write data, guarantees that the network is fully usable.</p>
+<p><code>isTypeWifi()</code> Checks if there is connectivity to WIFI, when active, all data traffic will use this network.</p>
+<p><code>isTypeMobile()</code> Checks if there is connectivity to MOBILE data, when active, all data traffic will use this network.</p>
+<p><code>isConnectedConnectionFast()</code> Checks if there is connectivity to MOBILE data speed of about 400kbps to 23Mbps. Supports subtype EVDO0, EVDOA, EVDOB, UMTS, EHRPD, HSDPA, HSPA, HSUPA, HSPAP and LTE.</p>
+<p><code>isConnectedConnectionSlow()</code>Checks if there is connectivity to MOBILE data speed of about 14kbps to 100kbps. Supports subtype CDMA, 1xRTT, EDGE, GPRS and IDEN.</p>
 
 # Installation
 ### Gradle
