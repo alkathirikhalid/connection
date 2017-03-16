@@ -10,6 +10,7 @@ An Android utility class to Monitor network connections like Wi-Fi, GPRS, UMTS, 
 
 <p>All accessible and usable methods automatically calls <code>isConnected()</code> to guarantees that connectivity exists except for <code>isConnectedOrConnecting</code> depending on your application needs.</p>
 <code>Connection.isConnectedConnectionSlow(context);</code>
+
 ### Accesible and usable Methods
 <p><code>isConnectedOrConnecting()</code> Checks if there is connectivity or is in the process of being established. This is applicable for applications that need to do any less intensive or slow network related activities.</p>
 <p><code>isConnected()</code> Checks if there is connectivity and it is possible to pass data. This is applicable for applications that need to do any intensive network related activities like data transactions such as read or write data, guarantees that the network is fully usable.</p>
