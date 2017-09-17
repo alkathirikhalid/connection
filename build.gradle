@@ -16,7 +16,7 @@ buildscript {
 
 allprojects {
     group = 'com.github.alkathirikhalid'
-    version 'v1.01'
+    version 'v1.02'
     repositories {
         jcenter()
     }

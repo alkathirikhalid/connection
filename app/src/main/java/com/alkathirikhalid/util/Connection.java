@@ -36,7 +36,7 @@ import android.telephony.TelephonyManager;
  * event faster mobile connection are introduce in the future that are above 20 plus Mbps.<strong/><p/>
  *
  * @author alkathirikhalid
- * @version 1.01
+ * @version 1.02
  */
 public class Connection {
 
