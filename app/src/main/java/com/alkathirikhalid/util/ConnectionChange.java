@@ -27,7 +27,7 @@ import android.content.Intent;
  * @version 1.02
  */
 
-public class ConnectionChange extends BroadcastReceiver {
+class ConnectionChange extends BroadcastReceiver {
 
     /**
      * <p>An Interface that provides a Call Back Mechanism to be notified
@@ -36,32 +36,15 @@ public class ConnectionChange extends BroadcastReceiver {
     private ConnectionChangeListener connectionChangeListener;
 
     /**
-     * <p>Default Constructor adhering to Observer Pattern.</p>
-     * To be used with <code>setConnectionChangeListener</code>.
-     */
-    public ConnectionChange() {
-    }
-
-    /**
      * <p>Constructor adhering to Observer Pattern.</p>
      * To be used after <code>ConnectionChange()</code>.
      *
      * @param connectionChangeListener The Connection Change Call Back.
      * @return The Initialized linked Connection Change Call Back.
      */
-    public ConnectionChange setConnectionChangeListener(ConnectionChangeListener connectionChangeListener) {
+    ConnectionChange setConnectionChangeListener(ConnectionChangeListener connectionChangeListener) {
         this.connectionChangeListener = connectionChangeListener;
         return this;
-    }
-
-    /**
-     * <p>Constructor adhering to Delegation Pattern.</p>
-     * Only used after <code>implements</code> <code>ConnectionChangeListener</code>.
-     *
-     * @param connectionChangeListener The Connection Change Call Back.
-     */
-    public ConnectionChange(ConnectionChangeListener connectionChangeListener) {
-        this.connectionChangeListener = connectionChangeListener;
     }
 
     /**
@@ -100,48 +83,43 @@ public class ConnectionChange extends BroadcastReceiver {
      */
     @Override
     public void onReceive(Context context, Intent intent) {
-        /*
-         * Provide real time values by ignoring the value that was last broadcast
-         * and is currently held in the sticky cache
-         */
-        if (!isInitialStickyBroadcast()) {
-            // Checks if there are linked listeners before invoking change
-            if (connectionChangeListener != null) {
-                // Checks if there is connectivity or is in the process of being established
-                if (Connection.isConnectedOrConnecting(context)) {
-                    // Notifies there is connectivity or is in the process of being established
-                    connectionChangeListener.connectedOrConnecting();
-                }
-                // Checks if there is connectivity and it is possible to pass data
-                if (Connection.isConnected(context)) {
-                    // Notifies there is connectivity and it is possible to pass data
-                    connectionChangeListener.connected();
-                }
-                // Checks if there is connectivity to WIFI
-                if (Connection.isTypeWifi(context)) {
-                    // Notifies there is connectivity to WIFI
-                    connectionChangeListener.typeWifi();
-                }
-                // Checks if there is connectivity to MOBILE
-                if (Connection.isTypeMobile(context)) {
-                    // Notifies there is connectivity to MOBILE
-                    connectionChangeListener.typeMobile();
-                }
-                // Checks if there is connectivity to MOBILE data speed of about 400kbps to 23Mbps
-                if (Connection.isConnectedConnectionFast(context)) {
-                    // Notifies there is connectivity to MOBILE data speed of about 400kbps to 23Mbps
-                    connectionChangeListener.connectedConnectionFast();
-                }
-                // Checks if there is connectivity to MOBILE data speed of about 14kbps to 100kbps
-                if (Connection.isConnectedConnectionSlow(context)) {
-                    // Notifies there is connectivity to MOBILE data speed of about 14kbps to 100kbps
-                    connectionChangeListener.connectedConnectionSlow();
-                }
-                // Checks there is no connectivity
-                if (!Connection.isConnectedOrConnecting(context)) {
-                    // Notifies there is no connectivity
-                    connectionChangeListener.noNetwork();
-                }
+
+        // Checks if there are linked listeners before invoking change
+        if (connectionChangeListener != null) {
+            // Checks if there is connectivity or is in the process of being established
+            if (Connection.isConnectedOrConnecting(context)) {
+                // Notifies there is connectivity or is in the process of being established
+                connectionChangeListener.connectedOrConnecting();
+            }
+            // Checks if there is connectivity and it is possible to pass data
+            if (Connection.isConnected(context)) {
+                // Notifies there is connectivity and it is possible to pass data
+                connectionChangeListener.connected();
+            }
+            // Checks if there is connectivity to WIFI
+            if (Connection.isTypeWifi(context)) {
+                // Notifies there is connectivity to WIFI
+                connectionChangeListener.typeWifi();
+            }
+            // Checks if there is connectivity to MOBILE
+            if (Connection.isTypeMobile(context)) {
+                // Notifies there is connectivity to MOBILE
+                connectionChangeListener.typeMobile();
+            }
+            // Checks if there is connectivity to MOBILE data speed of about 400kbps to 23Mbps
+            if (Connection.isConnectedConnectionFast(context)) {
+                // Notifies there is connectivity to MOBILE data speed of about 400kbps to 23Mbps
+                connectionChangeListener.connectedConnectionFast();
+            }
+            // Checks if there is connectivity to MOBILE data speed of about 14kbps to 100kbps
+            if (Connection.isConnectedConnectionSlow(context)) {
+                // Notifies there is connectivity to MOBILE data speed of about 14kbps to 100kbps
+                connectionChangeListener.connectedConnectionSlow();
+            }
+            // Checks there is no connectivity
+            if (!Connection.isConnectedOrConnecting(context)) {
+                // Notifies there is no connectivity
+                connectionChangeListener.noNetwork();
             }
         }
     }

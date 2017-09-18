@@ -24,7 +24,7 @@ package com.alkathirikhalid.util;
  * @version 1.02
  */
 
-public interface ConnectionChangeListener {
+interface ConnectionChangeListener {
 
     /**
      * <p>Notify there is connectivity or is in the process of being established.</p>

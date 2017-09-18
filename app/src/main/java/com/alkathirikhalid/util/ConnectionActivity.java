@@ -35,12 +35,12 @@ public abstract class ConnectionActivity extends Activity implements ConnectionC
     /**
      * <p>Connection Change Broadcast Receiver.</p>
      */
-    protected ConnectionChange connectionChange;
+    private ConnectionChange connectionChange;
 
     /**
      * <p>Structured description of Intent values to be matched.</p>
      */
-    protected IntentFilter intentFilter;
+    private IntentFilter intentFilter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
