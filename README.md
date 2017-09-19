@@ -22,7 +22,7 @@ An Android utility class to Monitor network connections like Wi-Fi, GPRS, UMTS, 
 ### Real time updates
 
 <p>To have connectivity updates in real time simply either replace:-</p>
-<p><code>ConnectionActivity</code> in place of <code>Activity</code.></p>
+<p><code>ConnectionActivity</code> in place of <code>Activity</code>.</p>
 <p><code>ConnectionAppCompactActivity</code> in place of <code>AppCompactActivity</code>.</p>
 
 # Installation
