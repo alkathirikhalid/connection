@@ -19,6 +19,12 @@ An Android utility class to Monitor network connections like Wi-Fi, GPRS, UMTS, 
 <p><code>isConnectedConnectionFast()</code> Checks if there is connectivity to MOBILE data speed of about 400kbps to 23Mbps. Supports subtype EVDO0, EVDOA, EVDOB, UMTS, EHRPD, HSDPA, HSPA, HSUPA, HSPAP and LTE.</p>
 <p><code>isConnectedConnectionSlow()</code>Checks if there is connectivity to MOBILE data speed of about 14kbps to 100kbps. Supports subtype CDMA, 1xRTT, EDGE, GPRS and IDEN.</p>
 
+### Real time updates
+
+<p>To have connectivity updates in real time simply either replace:-</p>
+<p><code>ConnectionActivity</code> in place of <code>Activity</code.></p>
+<p><code>ConnectionAppCompactActivity</code> in place of <code>AppCompactActivity</code>.</p>
+
 # Installation
 ### Gradle
 ```
@@ -31,7 +37,7 @@ allprojects {
 ```
 ```
 dependencies {
-	        compile 'com.github.alkathirikhalid:connection:v1.01'
+	        compile 'com.github.alkathirikhalid:connection:v1.02'
 	}
   ```
 ### Maven
@@ -53,8 +59,8 @@ dependencies {
   
 # Further Resources
 <ul>
-<li>Document download: https://github.com/alkathirikhalid/connection/releases/download/v1.01/docs.zip</li>
-<li>AAR download: https://github.com/alkathirikhalid/connection/releases/download/v1.01/connection.aar</li>
+<li>Document download: https://github.com/alkathirikhalid/connection/releases/download/v1.02/docs.zip</li>
+<li>AAR download: https://github.com/alkathirikhalid/connection/releases/download/v1.02/connection.aar</li>
 </ul>
   
 # License
