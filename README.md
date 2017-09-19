@@ -20,7 +20,6 @@ An Android utility class to Monitor network connections like Wi-Fi, GPRS, UMTS, 
 <p><code>isConnectedConnectionSlow()</code>Checks if there is connectivity to MOBILE data speed of about 14kbps to 100kbps. Supports subtype CDMA, 1xRTT, EDGE, GPRS and IDEN.</p>
 
 ### Real time updates
-
 <p>To have connectivity updates in real time simply either replace:-</p>
 <p><code>ConnectionActivity</code> in place of <code>Activity</code>.</p>
 <p><code>ConnectionAppCompactActivity</code> in place of <code>AppCompactActivity</code>.</p>
