@@ -28,6 +28,54 @@ An Android utility class to Monitor network connections like Wi-Fi, GPRS, UMTS, 
 <p>The minimun Android API 16. Thats it!</p>
 <p><strong>The library will handle the system broadcast and permissions.</strong></p>
 
+```
+public class MainActivity extends ConnectionAppCompactActivity {
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+
+    }
+    @Override
+    public void connectedOrConnecting() {
+        // TODO
+    }
+
+    @Override
+    public void connected() {
+        // TODO
+    }
+
+    @Override
+    public void typeWifi() {
+        // TODO
+    }
+
+    @Override
+    public void typeMobile() {
+        // TODO
+    }
+
+    @Override
+    public void connectedConnectionFast() {
+        // TODO
+    }
+
+    @Override
+    public void connectedConnectionSlow() {
+        // TODO
+    }
+
+    @Override
+    public void noNetwork() {
+        // TODO
+    }
+}
+```
+
 # Installation
 ### Gradle
 ```
