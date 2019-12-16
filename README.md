@@ -88,8 +88,8 @@ allprojects {
 ```
 ```
 dependencies {
-		// compile 'com.github.alkathirikhalid:connection:v1.01' // Connection Only
-	        compile 'com.github.alkathirikhalid:connection:v1.02' // Connection with Real Time Updates
+		// implementation 'com.github.alkathirikhalid:connection:v1.01' // Connection Only
+	        implementation 'com.github.alkathirikhalid:connection:v1.03' // Connection with Real Time Updates
 	}
   ```
 ### Maven
@@ -105,7 +105,7 @@ dependencies {
   <dependency>
 	    <groupId>com.github.alkathirikhalid</groupId>
 	    <artifactId>connection</artifactId>
-	    <version>v1.01</version>
+	    <version>v1.03</version>
 	</dependency>
   ```
   
