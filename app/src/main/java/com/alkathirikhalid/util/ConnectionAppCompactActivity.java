@@ -18,7 +18,8 @@ package com.alkathirikhalid.util;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * <p>Enhanced Base class with Real Time Connection Changes.</p>
