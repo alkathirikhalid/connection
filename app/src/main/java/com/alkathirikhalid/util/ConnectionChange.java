@@ -24,7 +24,7 @@ import android.content.Intent;
  * A subclass of <code>BroadcastReceiver</code> that will receive intents sent by <code>sendBroadcast()</code>.
  *
  * @author alkathirikhalid
- * @version 1.02
+ * @version 1.05
  */
 
 class ConnectionChange extends BroadcastReceiver {

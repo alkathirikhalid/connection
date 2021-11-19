@@ -36,19 +36,9 @@ import android.telephony.TelephonyManager;
  * event faster mobile connection are introduce in the future that are above 20 plus Mbps.<strong/><p/>
  *
  * @author alkathirikhalid
- * @version 1.02
+ * @version 1.05
  */
-public class Connection {
-
-    /**
-     * <p><code>Connection</code> instances should <strong>NOT</strong> be created. The class should
-     * be used as <code>Connection.isConnectedConnectionSlow(context);</code>.</p>
-     * <p>
-     * This constructor is public to permit Java Doc generation.</p>
-     */
-    public Connection() {
-        super();
-    }
+public abstract class Connection {
 
     /**
      * <p>Serves the <code>Connection</code> public methods with a way to get an instance of the
@@ -165,32 +155,23 @@ public class Connection {
             switch (subType) {
                 // Speeds of about ~ 400 to 1000 kbps
                 case TelephonyManager.NETWORK_TYPE_EVDO_0:
-                    return true;
-                // Speeds of about ~ 600 to 1400 kbps.
+                    // Speeds of about ~ 600 to 1400 kbps.
                 case TelephonyManager.NETWORK_TYPE_EVDO_A:
-                    return true;
-                // Speeds of about ~ 2 to 14 Mbps.
+                    // Speeds of about ~ 2 to 14 Mbps.
                 case TelephonyManager.NETWORK_TYPE_HSDPA:
-                    return true;
-                // Speeds of about ~ 700 to 1700 kbps
+                    // Speeds of about ~ 700 to 1700 kbps
                 case TelephonyManager.NETWORK_TYPE_HSPA:
-                    return true;
-                // Speeds of about ~ 1 to 23 Mbps
+                    // Speeds of about ~ 1 to 23 Mbps
                 case TelephonyManager.NETWORK_TYPE_HSUPA:
-                    return true;
-                // Speeds of about ~ 400 to 7000 kbps
+                    // Speeds of about ~ 400 to 7000 kbps
                 case TelephonyManager.NETWORK_TYPE_UMTS:
-                    return true;
-                // Speeds of about ~ 1 to 2 Mbps
+                    // Speeds of about ~ 1 to 2 Mbps
                 case TelephonyManager.NETWORK_TYPE_EHRPD:
-                    return true;
-                // Speeds of about ~ 5 Mbps
+                    // Speeds of about ~ 5 Mbps
                 case TelephonyManager.NETWORK_TYPE_EVDO_B:
-                    return true;
-                // Speeds of about ~ 10 to 20 Mbps
+                    // Speeds of about ~ 10 to 20 Mbps
                 case TelephonyManager.NETWORK_TYPE_HSPAP:
-                    return true;
-                // Speeds of about ~ 10+ Mbps
+                    // Speeds of about ~ 10+ Mbps
                 case TelephonyManager.NETWORK_TYPE_LTE:
                     return true;
                 // Otherwise
@@ -219,17 +200,13 @@ public class Connection {
             switch (subType) {
                 // Speeds of about ~ 50 to 100 kbps
                 case TelephonyManager.NETWORK_TYPE_1xRTT:
-                    return true;
-                // Speeds of about ~ 14 to 64 kbps
+                    // Speeds of about ~ 14 to 64 kbps
                 case TelephonyManager.NETWORK_TYPE_CDMA:
-                    return true;
-                // Speeds of about ~ 50 to 100 kbps
+                    // Speeds of about ~ 50 to 100 kbps
                 case TelephonyManager.NETWORK_TYPE_EDGE:
-                    return true;
-                // Speeds of about ~ 100 kbps
+                    // Speeds of about ~ 100 kbps
                 case TelephonyManager.NETWORK_TYPE_GPRS:
-                    return true;
-                // Speeds of about ~ 25 kbps
+                    // Speeds of about ~ 25 kbps
                 case TelephonyManager.NETWORK_TYPE_IDEN:
                     return true;
                 // Otherwise

@@ -21,7 +21,7 @@ package com.alkathirikhalid.util;
  * to be notified when Connection Change has taken place.
  *
  * @author alkathirikhalid
- * @version 1.02
+ * @version 1.05
  */
 
 interface ConnectionChangeListener {

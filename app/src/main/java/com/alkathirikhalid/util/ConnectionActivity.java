@@ -27,7 +27,7 @@ import android.os.Bundle;
  * action bar features.
  *
  * @author alkathirikhalid
- * @version 1.02
+ * @version 1.05
  */
 
 public abstract class ConnectionActivity extends Activity implements ConnectionChangeListener {
@@ -73,5 +73,42 @@ public abstract class ConnectionActivity extends Activity implements ConnectionC
 
         // Unregisters the connectivity change call back
         connectionChange.setConnectionChangeListener(null);
+    }
+
+    // Implemented methods
+
+    @Override
+    public void connectedOrConnecting() {
+        // To be implemented if / when needed on host app
+    }
+
+    @Override
+    public void connected() {
+        // To be implemented if / when needed on host app
+    }
+
+    @Override
+    public void typeWifi() {
+        // To be implemented if / when needed on host app
+    }
+
+    @Override
+    public void typeMobile() {
+        // To be implemented if / when needed on host app
+    }
+
+    @Override
+    public void connectedConnectionFast() {
+        // To be implemented if / when needed on host app
+    }
+
+    @Override
+    public void connectedConnectionSlow() {
+        // To be implemented if / when needed on host app
+    }
+
+    @Override
+    public void noNetwork() {
+        // To be implemented if / when needed on host app
     }
 }
