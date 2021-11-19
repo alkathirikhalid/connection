@@ -3,11 +3,10 @@
 buildscript {
     repositories {
         google()
-        jcenter()
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.android.tools.build:gradle:3.5.4'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -16,10 +15,10 @@ buildscript {
 
 allprojects {
     group = 'com.github.alkathirikhalid'
-    version 'v1.03'
+    version 'v1.04'
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 }
 
