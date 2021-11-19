@@ -91,6 +91,26 @@ dependencies {
 	        implementation 'com.github.alkathirikhalid:connection:v1.05'
 	}
   ```
+  ### Gradle 7 issues
+A problem occurred evaluating root project 'Your App'
+
+Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by build file 'build.gradle'
+
+Simple Fix, in settings.gradle add jitpack repo, it must be present in settings.gradle on faliure will trigger dependencyResolutionManagement
+```
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' } // Jitpack Repo
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+}
+rootProject.name = "The Test"
+include ':app'
+
+  ```
 ### Maven
   ```
   <repositories>
