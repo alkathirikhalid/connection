@@ -11,6 +11,8 @@ buildscript {
 }
 
 allprojects {
+    group = 'com.github.alkathirikhalid'
+    version 'v1.08'
     repositories {
         google()
         mavenCentral()
