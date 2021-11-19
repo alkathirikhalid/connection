@@ -107,7 +107,7 @@ dependencyResolutionManagement {
         jcenter() // Warning: this repository is going to shut down soon
     }
 }
-rootProject.name = "The Test"
+rootProject.name = "Your App"
 include ':app'
 
   ```
