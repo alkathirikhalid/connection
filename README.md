@@ -88,8 +88,7 @@ allprojects {
 ```
 ```
 dependencies {
-		// implementation 'com.github.alkathirikhalid:connection:v1.01' // Connection Only
-	        implementation 'com.github.alkathirikhalid:connection:v1.03' // Connection with Real Time Updates
+	        implementation 'com.github.alkathirikhalid:connection:v1.05'
 	}
   ```
 ### Maven
@@ -105,19 +104,19 @@ dependencies {
   <dependency>
 	    <groupId>com.github.alkathirikhalid</groupId>
 	    <artifactId>connection</artifactId>
-	    <version>v1.03</version>
+	    <version>v1.05</version>
 	</dependency>
   ```
   
 # Further Resources
 <ul>
 <li>Document download: https://github.com/alkathirikhalid/connection/releases/download/v1.02/docs.zip</li>
-<li>AAR download: https://github.com/alkathirikhalid/connection/releases/download/v1.02/connection.aar</li>
+<li>AAR download: https://github.com/alkathirikhalid/connection/releases/download/v1.05/connection.aar</li>
 </ul>
   
 # License
 
-Copyright 2015 Al-Kathiri Khalid www.alkathirikhalid.com
+Copyright 2015 - 2021 Al-Kathiri Khalid www.alkathirikhalid.com
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
