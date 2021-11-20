@@ -23,20 +23,16 @@ An Android utility class to Monitor network connections like Wi-Fi, GPRS, UMTS, 
 <p>To have connectivity updates in real time simply either replace:-</p>
 <p><code>ConnectionActivity</code> in place of <code>Activity</code>.</p>
 <p><code>ConnectionAppCompactActivity</code> in place of <code>AppCompactActivity</code>.</p>
+<p>And Override any of the provided 7 methods, which gives real time updates of all 6 mothods explained in <b>Accesible and usable Methods</b> including the 7 no network, or simply use them without real time update as seen fit.</p>
 
 ### Permission and Requirements
 <p>The minimun Android API 16. Thats it!</p>
-<p><strong>The library will handle the system broadcast and permissions.</strong></p>
+<p><strong>The library will handle the system broadcast and permissions automatically, simply add the library via aar file or as a dependency declaration (Preferred) and use it out of the box without further settings.</strong></p>
 
 ```
 public class MainActivity extends ConnectionAppCompactActivity {
 
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+// Optional realtime update, simply Override any or all / none
 
     }
     @Override
@@ -88,15 +84,13 @@ allprojects {
 ```
 ```
 dependencies {
-	        implementation 'com.github.alkathirikhalid:connection:v1.05'
+	        implementation 'com.github.alkathirikhalid:connection:v2.0.0'
 	}
   ```
   ### Gradle 7 issues
-A problem occurred evaluating root project 'Your App'
+A problem occurred will occur where the declared jitpack repo in project will fail to resolve / get the connection library
 
-Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by build file 'build.gradle'
-
-Simple Fix, in settings.gradle add jitpack repo, it must be present in settings.gradle on faliure will trigger dependencyResolutionManagement
+Simple Fix, in <b>settings.gradle</b> add jitpack repo, it must be present in settings.gradle on faliure will trigger dependencyResolutionManagement
 ```
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -124,14 +118,14 @@ include ':app'
   <dependency>
 	    <groupId>com.github.alkathirikhalid</groupId>
 	    <artifactId>connection</artifactId>
-	    <version>v1.05</version>
+	    <version>v2.0.0</version>
 	</dependency>
   ```
   
 # Further Resources
 <ul>
 <li>Document download: https://github.com/alkathirikhalid/connection/releases/download/v1.02/docs.zip</li>
-<li>AAR download: https://github.com/alkathirikhalid/connection/releases/download/v1.05/connection.aar</li>
+<li>AAR download: https://github.com/alkathirikhalid/connection/releases/download/v2.0.0/connection.aar</li>
 </ul>
   
 # License
