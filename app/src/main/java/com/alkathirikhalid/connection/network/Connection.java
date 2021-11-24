@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.alkathirikhalid.util;
+package com.alkathirikhalid.connection.network;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
@@ -21,7 +21,7 @@ import android.net.NetworkInfo;
 import android.telephony.TelephonyManager;
 
 /**
- * <p>Connection utility.</p>
+ * <p>Connection.</p>
  * <p>
  * Monitor network connections like Wi-Fi, GPRS, UMTS, etc for API 16 and above,
  * this class attempt to fail over to another network when connectivity to a network is lost

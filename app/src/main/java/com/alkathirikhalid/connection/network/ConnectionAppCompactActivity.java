@@ -13,16 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.alkathirikhalid.util;
+package com.alkathirikhalid.connection.network;
 
-import android.app.Activity;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 /**
  * <p>Enhanced Base class with Real Time Connection Changes.</p>
- * For activities without the
+ * For activities that use the
  * <a href="{@docRoot}tools/extras/support-library.html">support library</a>
  * action bar features.
  *
@@ -30,7 +31,7 @@ import android.os.Bundle;
  * @version 1.05
  */
 
-public abstract class ConnectionActivity extends Activity implements ConnectionChangeListener {
+public abstract class ConnectionAppCompactActivity extends AppCompatActivity implements ConnectionChangeListener {
 
     /**
      * <p>Connection Change Broadcast Receiver.</p>
