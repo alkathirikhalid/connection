@@ -16,7 +16,10 @@
 package com.alkathirikhalid.connection.call;
 
 /**
- * Supported HTTP Methods
+ * Supported Call HTTP Methods
+ *
+ * @author alkathirikhalid
+ * @version 2.1.0
  */
 public enum Method {
     GET,

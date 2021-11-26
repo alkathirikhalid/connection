@@ -17,11 +17,11 @@ package com.alkathirikhalid.connection.network;
 
 /**
  * <p>Connection Change Call Back.</p>
- * An <code>Interface</code> that provides a Call Back Mechanism
- * to be notified when Connection Change has taken place.
+ * An <code>Interface</code> that provides a Call Back to notify
+ * when Connection has Changed.
  *
  * @author alkathirikhalid
- * @version 1.05
+ * @version 2.1.0
  */
 
 interface ConnectionChangeListener {
@@ -32,7 +32,7 @@ interface ConnectionChangeListener {
     void connectedOrConnecting();
 
     /**
-     * <p>Notify there is connectivity and it is possible to pass data.</p>
+     * <p>Notify there is connectivity and it is possible for an internet connection.</p>
      */
     void connected();
 
@@ -47,7 +47,7 @@ interface ConnectionChangeListener {
     void typeMobile();
 
     /**
-     * <p>Notify there is connectivity to MOBILE data speed of about 400kbps to 23Mbps.</p>
+     * <p>Notify there is connectivity to MOBILE data speed of about 400kbps and above.</p>
      */
     void connectedConnectionFast();
 

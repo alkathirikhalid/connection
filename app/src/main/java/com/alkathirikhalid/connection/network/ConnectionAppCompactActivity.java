@@ -28,7 +28,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * action bar features.
  *
  * @author alkathirikhalid
- * @version 1.05
+ * @version 2.1.0
  */
 
 public abstract class ConnectionAppCompactActivity extends AppCompatActivity implements ConnectionChangeListener {

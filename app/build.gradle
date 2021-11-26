@@ -28,7 +28,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.alkathirikhalid'
                 artifactId = 'connection'
-                version = 'v2.0.0'
+                version = 'v2.1.0'
             }
         }
     }

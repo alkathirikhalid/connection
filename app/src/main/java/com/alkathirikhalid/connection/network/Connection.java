@@ -36,7 +36,7 @@ import android.telephony.TelephonyManager;
  * event faster mobile connection are introduce in the future that are above 20 plus Mbps.<strong/><p/>
  *
  * @author alkathirikhalid
- * @version 1.05
+ * @version 2.1.0
  */
 public abstract class Connection {
 
@@ -154,25 +154,27 @@ public abstract class Connection {
         } else if (type == ConnectivityManager.TYPE_MOBILE) {
             switch (subType) {
                 // Speeds of about ~ 400 to 1000 kbps
-                case TelephonyManager.NETWORK_TYPE_EVDO_0:
+                case TelephonyManager.NETWORK_TYPE_EVDO_0: // 3G
                     // Speeds of about ~ 600 to 1400 kbps.
-                case TelephonyManager.NETWORK_TYPE_EVDO_A:
+                case TelephonyManager.NETWORK_TYPE_EVDO_A: // 3G
                     // Speeds of about ~ 2 to 14 Mbps.
-                case TelephonyManager.NETWORK_TYPE_HSDPA:
+                case TelephonyManager.NETWORK_TYPE_HSDPA: // 3G
                     // Speeds of about ~ 700 to 1700 kbps
-                case TelephonyManager.NETWORK_TYPE_HSPA:
+                case TelephonyManager.NETWORK_TYPE_HSPA: // 3G
                     // Speeds of about ~ 1 to 23 Mbps
-                case TelephonyManager.NETWORK_TYPE_HSUPA:
+                case TelephonyManager.NETWORK_TYPE_HSUPA: // 3G
                     // Speeds of about ~ 400 to 7000 kbps
-                case TelephonyManager.NETWORK_TYPE_UMTS:
+                case TelephonyManager.NETWORK_TYPE_UMTS: // 3G
                     // Speeds of about ~ 1 to 2 Mbps
-                case TelephonyManager.NETWORK_TYPE_EHRPD:
+                case TelephonyManager.NETWORK_TYPE_EHRPD: // 3G
                     // Speeds of about ~ 5 Mbps
-                case TelephonyManager.NETWORK_TYPE_EVDO_B:
+                case TelephonyManager.NETWORK_TYPE_EVDO_B: // 3G
                     // Speeds of about ~ 10 to 20 Mbps
-                case TelephonyManager.NETWORK_TYPE_HSPAP:
+                case TelephonyManager.NETWORK_TYPE_HSPAP: // 3G
                     // Speeds of about ~ 10+ Mbps
-                case TelephonyManager.NETWORK_TYPE_LTE:
+                case TelephonyManager.NETWORK_TYPE_LTE: // 4G
+                case TelephonyManager.NETWORK_TYPE_IWLAN: // 4G
+                case TelephonyManager.NETWORK_TYPE_NR: // 5G
                     return true;
                 // Otherwise
                 case TelephonyManager.NETWORK_TYPE_UNKNOWN:
@@ -199,15 +201,15 @@ public abstract class Connection {
         } else if (type == ConnectivityManager.TYPE_MOBILE) {
             switch (subType) {
                 // Speeds of about ~ 50 to 100 kbps
-                case TelephonyManager.NETWORK_TYPE_1xRTT:
+                case TelephonyManager.NETWORK_TYPE_1xRTT: // 2G
                     // Speeds of about ~ 14 to 64 kbps
-                case TelephonyManager.NETWORK_TYPE_CDMA:
+                case TelephonyManager.NETWORK_TYPE_CDMA: // 2G
                     // Speeds of about ~ 50 to 100 kbps
-                case TelephonyManager.NETWORK_TYPE_EDGE:
+                case TelephonyManager.NETWORK_TYPE_EDGE: // 2G
                     // Speeds of about ~ 100 kbps
-                case TelephonyManager.NETWORK_TYPE_GPRS:
+                case TelephonyManager.NETWORK_TYPE_GPRS: // 2G
                     // Speeds of about ~ 25 kbps
-                case TelephonyManager.NETWORK_TYPE_IDEN:
+                case TelephonyManager.NETWORK_TYPE_IDEN: // 2G
                     return true;
                 // Otherwise
                 case TelephonyManager.NETWORK_TYPE_UNKNOWN:

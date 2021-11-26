@@ -27,7 +27,7 @@ import android.os.Bundle;
  * action bar features.
  *
  * @author alkathirikhalid
- * @version 1.05
+ * @version 2.1.0
  */
 
 public abstract class ConnectionActivity extends Activity implements ConnectionChangeListener {

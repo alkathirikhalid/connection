@@ -20,16 +20,29 @@ import androidx.annotation.Nullable;
 
 /**
  * <p>Background task, thread provider</p>
+ *
+ * @author alkathirikhalid
+ * @version 2.1.0
  */
 abstract class BackgroundTask extends Thread {
     private final Task task;
 
+    /**
+     * @param task the task call back
+     */
     protected BackgroundTask(@NonNull Task task) {
         this.task = task;
     }
 
+    /**
+     * @return the unique task identifier
+     */
     protected abstract int getTaskId();
 
+    /**
+     * @param httpCode the http response code
+     * @param result   the result from server an Object type of String (Server) or Exception (Local)
+     */
     protected void executed(int httpCode, @Nullable Object result) {
         this.task.onTaskCompleted(this.getTaskId(), httpCode, result);
     }

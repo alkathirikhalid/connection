@@ -17,6 +17,19 @@ package com.alkathirikhalid.connection.call;
 
 import androidx.annotation.Nullable;
 
+/**
+ * Call back mechanism for all tasks
+ *
+ * @author alkathirikhalid
+ * @version 2.1.0
+ */
 public interface Task {
+    /**
+     * Notify observing class on task completed
+     *
+     * @param task     the task unique identifier
+     * @param httpCode the http response code
+     * @param result   the result object of String (Server) or Exception (Locally)
+     */
     void onTaskCompleted(int task, int httpCode, @Nullable Object result);
 }

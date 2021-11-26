@@ -27,6 +27,13 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * <p>Call</p>
+ * Make synchronous (none blocking) http call / connection with a single line
+ *
+ * @author alkathirikhalid
+ * @version 2.1.0
+ */
 public abstract class Call {
 
     // Global extra request properties such as security / date / authentication e.t.c for all calls
@@ -34,10 +41,22 @@ public abstract class Call {
     // Global connection and read time out fot all calls
     private static int timeOut = 3000; // default half a minute
 
+    /**
+     * Add global properties to be used in all / next calls
+     *
+     * @param globalProperty the key / vale pair as expected by server
+     * @return true on successful adding, false on fail
+     */
     public static boolean addGlobalProperty(GlobalProperty globalProperty) {
         return Call.globalProperties.add(globalProperty);
     }
 
+    /**
+     * Remove global property not to be used in all / next calls
+     *
+     * @param globalProperty the key / vale pair as expected by server
+     * @return true on successful removal, false on fail
+     */
     public static boolean removeGlobalProperty(GlobalProperty globalProperty) {
         return Call.globalProperties.remove(globalProperty);
     }
@@ -45,13 +64,23 @@ public abstract class Call {
     /**
      * Optional setup for connection and read time out / default 3000 (30 seconds)
      *
-     * @param timeOut some
+     * @param timeOut in milliseconds, 0 for indefinite (not advisable)
      */
     public static void setTimeOut(int timeOut) {
         Call.timeOut = timeOut;
     }
 
-
+    /**
+     * Executes synchronous (none blocking) http call
+     *
+     * @param taskId              the unique identifier of the task
+     * @param task                the task call back after completion or failure
+     * @param method              the http method POST, GET, PUT and DELETE
+     * @param url                 the full url including parameters for GET
+     * @param contentTypeRequest  the request type expected by server
+     * @param contentTypeResponse the response type expected back
+     * @param requestBody         the payload to be submit to the server
+     */
     public static void execute(int taskId, Task task, Method method, String url, ContentType contentTypeRequest, ContentType contentTypeResponse, String requestBody) {
         BackgroundTask backgroundTask = new BackgroundTask(task) {
             @Override
@@ -95,17 +124,13 @@ public abstract class Call {
                     // http response code and received data can be success / fail from server
                     executed(connection.getResponseCode(), response.toString());
                 } catch (Exception exception) {
-                    //        if (exception instanceof InterruptedIOException) {
-                    // Manually interrupted task
-                    //           executed(0, "Task cancelled");
-                    //       } else {
                     // Error occurred locally no response from server, http code 0 with the local exception
                     executed(0, exception);
-                    //       }
                 }
             }
         };
-        // Set a name to the backgroundTask for unique identification, required for canceling task premature when required
+        // Set a name to the backgroundTask for unique identification
+        // required for canceling task premature when required
         backgroundTask.setName(String.valueOf(taskId));
         // Start backgroundTask
         backgroundTask.start();
@@ -115,6 +140,7 @@ public abstract class Call {
      * To Cancel backgroundTask premature when needed
      *
      * @param taskId the task unique identifier
+     * @return true if found and canceled else false if not
      */
     public static boolean cancelTask(int taskId) {
         for (Thread backgroundTask : Thread.getAllStackTraces().keySet()) {

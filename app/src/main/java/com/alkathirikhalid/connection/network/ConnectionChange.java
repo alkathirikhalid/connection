@@ -24,14 +24,14 @@ import android.content.Intent;
  * A subclass of <code>BroadcastReceiver</code> that will receive intents sent by <code>sendBroadcast()</code>.
  *
  * @author alkathirikhalid
- * @version 1.05
+ * @version 2.1.0
  */
 
 class ConnectionChange extends BroadcastReceiver {
 
     /**
-     * <p>An Interface that provides a Call Back Mechanism to be notified
-     * when Connection Change has taken place.</p>
+     * <p>An Interface that provides a Call Back Mechanism to notify
+     * when Connection has Changed.</p>
      */
     private ConnectionChangeListener connectionChangeListener;
 
@@ -86,6 +86,8 @@ class ConnectionChange extends BroadcastReceiver {
 
         // Checks if there are linked listeners before invoking change
         if (connectionChangeListener != null) {
+            // Fall through all states, to allow multiple call back of the received Network Info
+
             // Checks if there is connectivity or is in the process of being established
             if (Connection.isConnectedOrConnecting(context)) {
                 // Notifies there is connectivity or is in the process of being established

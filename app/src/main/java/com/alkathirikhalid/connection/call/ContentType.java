@@ -18,13 +18,18 @@ package com.alkathirikhalid.connection.call;
 import androidx.annotation.NonNull;
 
 /**
- * Supported Content Types
+ * Supported Call Content Types
+ *
+ * @author alkathirikhalid
+ * @version 2.1.0
  */
 public enum ContentType {
+    // Request / Response expected types
     APPLICATION_JSON("application/json"),
     MULTIPART_FORM_DATA("multipart/form-data"),
     APPLICATION_FORM_URLENCODED("application/x-www-form-urlencoded");
 
+    // Keys for requests
     protected static final String CONTENT_TYPE = "Content-Type";
     protected static final String ACCEPT = "Accept";
 
