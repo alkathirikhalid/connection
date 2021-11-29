@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements Task {
 
 ### Network Real time updates
 <p>To have connectivity updates in real time simply either replace:-</p>
-<p>- code>ConnectionActivity</code> in place of <code>Activity</code>.</p>
+<p>- <code>ConnectionActivity</code> in place of <code>Activity</code>.</p>
 <p>- <code>ConnectionAppCompactActivity</code> in place of <code>AppCompactActivity</code>.</p>
 <p>And Override any of the provided 7 methods, which gives real time updates of all 6 mothods explained in <b>Network Accesible and usable Methods</b> including the 7th being <code>noNetwork()</code>, or simply use them without real time update as seen fit such as calling <code>Connection.isConnectedConnectionSlow(context)</code>.</p>
 
@@ -191,14 +191,16 @@ include ':app'
   <dependency>
 	    <groupId>com.github.alkathirikhalid</groupId>
 	    <artifactId>connection</artifactId>
-	    <version>v2.0.0</version>
+	    <version>v2.1.0</version>
 	</dependency>
   ```
   
 # Further Resources
 <ul>
-<li>Document download: https://github.com/alkathirikhalid/connection/releases/download/v1.02/docs.zip</li>
-<li>AAR download: https://github.com/alkathirikhalid/connection/releases/download/v2.0.0/connection.aar</li>
+<li>Document download: https://github.com/alkathirikhalid/connection/releases/download/v2.1.0/call-docs.zip</li>
+<li>Document download: https://github.com/alkathirikhalid/connection/releases/download/v2.1.0/network-docs.zip</li>
+<li>AAR download: https://github.com/alkathirikhalid/connection/releases/download/v2.1.0/connection.aar</li>
+<li>JAR download: https://github.com/alkathirikhalid/connection/releases/download/v2.1.0/call.jar</li>
 </ul>
   
 # License
