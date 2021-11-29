@@ -197,8 +197,8 @@ include ':app'
   
 # Further Resources
 <ul>
-<li>Document download: https://github.com/alkathirikhalid/connection/releases/download/v2.1.0/call-docs.zip</li>
-<li>Document download: https://github.com/alkathirikhalid/connection/releases/download/v2.1.0/network-docs.zip</li>
+<li>Document download: https://github.com/alkathirikhalid/connection/releases/download/v2.1.0/call-doc.zip</li>
+<li>Document download: https://github.com/alkathirikhalid/connection/releases/download/v2.1.0/network-doc.zip</li>
 <li>AAR download: https://github.com/alkathirikhalid/connection/releases/download/v2.1.0/connection.aar</li>
 <li>JAR download: https://github.com/alkathirikhalid/connection/releases/download/v2.1.0/call.jar</li>
 </ul>
