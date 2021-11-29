@@ -199,8 +199,8 @@ include ':app'
 <ul>
 <li>Document download: https://github.com/alkathirikhalid/connection/releases/download/v2.1.0/call-doc.zip</li>
 <li>Document download: https://github.com/alkathirikhalid/connection/releases/download/v2.1.0/network-doc.zip</li>
-<li>AAR download: https://github.com/alkathirikhalid/connection/releases/download/v2.1.0/connection.aar</li>
-<li>JAR download: https://github.com/alkathirikhalid/connection/releases/download/v2.1.0/call.jar</li>
+<li>AAR download: https://github.com/alkathirikhalid/connection/releases/download/v2.1.0/connection.aar (Network & Call)</li>
+<li>JAR download: https://github.com/alkathirikhalid/connection/releases/download/v2.1.0/call.jar (Call Only)</li>
 </ul>
   
 # License
